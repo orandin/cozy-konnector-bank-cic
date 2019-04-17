@@ -1,0 +1,61 @@
+{
+  "F": {
+    "_debit": {
+      "_type": "financial fee",
+      "_id": "400340",
+      "_proba": 0.7
+    },
+    "TENUE": {
+      "_debit": {
+        "_proba": 1
+      }
+    }
+  },
+  "INTERETS": {
+    "_id": "200130",
+    "_proba": 1
+  },
+  "REM": {
+    "_id": "200",
+    "_proba": 0.5,
+
+    "CHQ": {
+      "_id": "200",
+      "_proba": 1
+    }
+  },
+  "VIR": {
+    "_type": "transfer",
+    "_id": "100",
+    "_proba": 1,
+    "_credit": {
+      "_id": "200100",
+      "_proba": 0.8
+    },
+
+    "SEPA": {
+      "LIVRET": {
+        "_id": "600170",
+        "_proba": 1
+      }
+    },
+    "OVH": {
+      "_credit": {
+        "_id": "200110",
+        "_proba": 0.9
+      }
+    }
+  },
+  "PRLV": {
+    "_type": "direct debit",
+    "_id": "400100",
+    "_proba": 0.6,
+
+    "SEPA": {
+      "MATMUT": {
+        "_id": "400230",
+        "_proba": 0.8
+      }
+    }
+  }
+}
