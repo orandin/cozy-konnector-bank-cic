@@ -27,7 +27,11 @@ Create a `konnector-dev-config.json` file at the root with your test credentials
 ```javascript
 {
   "COZY_URL": "http://cozy.tools:8080",
-  "fields": {"login":"zuck.m@rk.fb", "password":"123456"}
+  "fields": {
+    "language": "fr",
+    "login":"zuck.m@rk.fb",
+    "password":"123456"
+  }
 }
 ```
 Then :
