@@ -1,6 +1,6 @@
 {
   "name": "cozy-konnector-bank-cic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Crédit Industriel et Commercial (CIC)",
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
     "clean": "rm -rf ./data",
     "build": "webpack",
     "lint": "eslint --fix .",
-    "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-git@github.com:konnectors/template.git}",
+    "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-git@github.com:orandin/cozy-konnector-bank-cic.git}",
     "cozyPublish": "cozy-app-publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})",
     "travisDeployKey": "./bin/generate_travis_deploy_key"
   },

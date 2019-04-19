@@ -9,6 +9,7 @@
   "editor": "Orandin",
   "vendor_link": "https://www.cic.fr",
   "categories": ["banking"],
+  "frequency": "hourly",
   "fields": {
     "language": {
       "type": "dropdown",
