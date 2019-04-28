@@ -262,8 +262,8 @@ function parseBankAccounts(bankAccountLines) {
  * //     type: 'direct debit',
  * //     cozyCategoryId: '200130',
  * //     cozyCategoryProba: 1,
- * //     date: "2018-12-30T23:00:00+01:00"             (UTC)
- * //     dateOperation: "2018-12-31T23:00:00+01:00",   (UTC)
+ * //     date: "2018-12-30T23:00:00+01:00",
+ * //     dateOperation: "2018-12-31T23:00:00+01:00",
  * //     dateImport: "2019-04-17T10:07:30.553Z",       (UTC)
  * //     currency: 'EUR',
  * //     vendorAccountId: 'XXXXXXXX',
