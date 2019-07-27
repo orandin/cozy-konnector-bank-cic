@@ -3,6 +3,7 @@ const {
   updateOrCreate,
   log,
   errors,
+  categorize,
   cozyClient
 } = require('cozy-konnector-libs')
 const groupBy = require('lodash/groupBy')
@@ -93,9 +94,12 @@ async function start(fields) {
     }
   })
 
+  log('info', 'Categorize the list of transactions')
+  const categorizedTransactions = await categorize(allOperations)
+
   const { accounts: savedAccounts } = await reconciliator.save(
     bankAccounts.map(x => omit(x, ['currency'])),
-    allOperations
+    categorizedTransactions
   )
 
   log(
@@ -301,8 +305,6 @@ function parseOperations(account, operationLines) {
       return {
         label: cells[2],
         type: metadata._type || 'none',
-        cozyCategoryId: metadata._id || '0',
-        cozyCategoryProba: metadata._proba || 0,
         date: date.format(),
         dateOperation: dateOperation.format(),
         dateImport: new Date().toISOString(),
